@@ -16,6 +16,7 @@ interface PokemonData {
     front_default: string;
     front_shiny: string;
   };
+  types: string[],
 }
 
 interface PokemonCardProps {
@@ -41,6 +42,8 @@ export default function PokemonCard({pokemonData}: PokemonCardProps){
       <h2 className='text-black text-center font-semibold capitalize'> 
         {pokemonData.name}
       </h2>
+
+      <p className='text-black text-center'> Tipo: {pokemonData.types.join(" / ")}</p>
 
       <p className='text-black text-center'> N.º {pokemonData.id}</p>
 
